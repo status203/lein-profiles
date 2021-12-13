@@ -2,4 +2,6 @@
                   [com.jakemccrary/lein-test-refresh "0.24.1"]]
         :dependencies [[pjstadig/humane-test-output "0.11.0"]]
         :injections [(require 'pjstadig.humane-test-output)
-                     (pjstadig.humane-test-output/activate!)]}}
+                     (pjstadig.humane-test-output/activate!)]
+        :test-refresh {:notify-command ["tests-send-wrap"]
+                       :notify-on-success false}}}
