@@ -4,4 +4,5 @@
         :injections [(require 'pjstadig.humane-test-output)
                      (pjstadig.humane-test-output/activate!)]
         :test-refresh {:notify-command ["tests-send-wrap"]
-                       :notify-on-success false}}}
+                       :notify-on-success false}
+        :repl-options {:init (require ['clojure.repl :refer :all])}}}
