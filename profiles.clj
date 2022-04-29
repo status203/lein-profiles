@@ -1,9 +1,11 @@
 {:user {:plugins [[lein-try "0.4.3"]
                   [com.jakemccrary/lein-test-refresh "0.24.1"]
                   [lein-ancient "1.0.0-RC3"]]
-        :dependencies [[pjstadig/humane-test-output "0.11.0"]]
+        :dependencies [[pjstadig/humane-test-output "0.11.0"]
+                       [hashp "0.2.1"]]
         :injections [(require 'pjstadig.humane-test-output)
-                     (pjstadig.humane-test-output/activate!)]
+                     (pjstadig.humane-test-output/activate!)
+                     (require 'hashp.core)]
         :test-refresh {:notify-command ["tests-send-wrap"]
                        :notify-on-success false}
         :repl-options {:init (require ['clojure.repl :refer :all])}}}
